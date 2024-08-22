@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import './card.scss'
+import "./card.scss";
 
 function Card({ item }) {
   return (
-    <div className='card'>
-      <Link to={`/${item.id}`} className='imageContainer'>
-        <img src={item.img} alt="" />
+    <div className="card">
+      <Link to={`/${item.id}`} className="imageContainer">
+        <img src={item.images[0]} alt="" />
       </Link>
       <div className="textContainer">
         <h2 className="title">
@@ -23,7 +23,7 @@ function Card({ item }) {
               <span>{item.bedroom} bedroom</span>
             </div>
             <div className="feature">
-              <img src="/bed.png" alt="" />
+              <img src="/bath.png" alt="" />
               <span>{item.bathroom} bathroom</span>
             </div>
           </div>
@@ -38,7 +38,7 @@ function Card({ item }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Card
+export default Card;
